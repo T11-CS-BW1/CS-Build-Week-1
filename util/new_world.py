@@ -3,11 +3,11 @@ from adventure.models import Player, Room
 import random
 
 fun_room_title = [
-    ["Forest","Cave","House","Island","Treehouse","Restaurant","Castle","Dungeon","Ship","Desert","Farm","Town","Bar"],
-    ["Mystery","Death","Sugar Gliders","Rad gnomes","Whaaaaat!!!","hip-hop","True Love","Explosions","Weapons","Candy","Elves","Trolls","Warlocks"]
+    ["Planet of The Apes","Milky Way","Pinwheel Galaxy","Black Eye Galaxy","Cartwheel Galaxy"," Jupiter","Earth","r Venus"," Mars","Saturn","Lord Mercury","Halley's Comet","Comet Encke"],
+    ["Shoemaker-Levy 9","Space Death","Sugar Gliders","Comet hale bopp","Comet Hyakutake","Comet Swift–Tuttle","Comet Kohoutek","Comet West","Apollo 11","Candy","Dawn of the Planet of the Apes"]
 ]
 fun_room_description = [
-    ["It's dark in here", "It's beautiful", "The area is dark and misty", "The area is seeping with magical power", "The area is covered in flowers"]
+    ["It's dark in here", "It's beautiful", "The area is dark", "The area is seeping with magical power", "The area is covered in acid"]
 ]
 
 
