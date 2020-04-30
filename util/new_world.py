@@ -3,11 +3,11 @@ from adventure.models import Player, Room
 import random
 
 fun_room_title = [
-    ["Forest","Cave","House","Island","Treehouse","Resturant","Castle","Dungeon","Ship","Desert","Farm","Town","Bar"],
-    ["Mystery","Death","Sugar Gliders","Randomnes","Whaaaaat!!!","hip-hop","True Love","Explosions","Weapons","Candy","Elves","Trolls","Doby"]
+    ["Forest","Cave","House","Island","Treehouse","Restaurant","Castle","Dungeon","Ship","Desert","Farm","Town","Bar"],
+    ["Mystery","Death","Sugar Gliders","Rad gnomes","Whaaaaat!!!","hip-hop","True Love","Explosions","Weapons","Candy","Elves","Trolls","Warlocks"]
 ]
 fun_room_description = [
-    ["It's dark in here", "It's beuitifull", "The area is dark and misty", "The area is seeping with magical power", "The area is covered in flowers"]
+    ["It's dark in here", "It's beautiful", "The area is dark and misty", "The area is seeping with magical power", "The area is covered in flowers"]
 ]
 
 

@@ -27,13 +27,11 @@ def initialize(request):
 @csrf_exempt
 @api_view(["GET"])
 def fetch_rooms(request):
-    rooms = Room.objects.all()
-    serializer = RoomSerializer(rooms, many=True)
-    if request.user:
-        return JsonResponse(serializer.data, safe=False, status=200)
-    else:
-        return JsonResponse({'error':"Not authorized"}, safe=True, status=403)
-
+    peninsula = []
+    world = Room.objects.all()
+    for room in world:
+        peninsula.append({"id": room.id, "title": room.title, "desc": room.description, "x": room.x, "y": room.y, "north": room.n_to, "south": room.s_to, "east": room.e_to, "west": room.w_to})
+    return JsonResponse({"world": peninsula}, safe=True)
 
 # @csrf_exempt
 @api_view(["POST"])
