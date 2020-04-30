@@ -4,7 +4,8 @@
 # You can modify generate_rooms() to create your own
 # procedural generation algorithm and use print_rooms()
 # to see the world.
-
+from adventure.models import Player, Room
+Room.objects.all().delete()
 
 class Room:
     def __init__(self, id, name, description, x, y):
@@ -100,7 +101,6 @@ class World:
         '''
         Print the rooms in room_grid in ascii characters.
         '''
-
         # Add top border
         str = "# " * ((3 + self.width * 5) // 2) + "\n"
 
@@ -157,6 +157,22 @@ width = 8
 height = 7
 w.generate_rooms(width, height, num_rooms)
 w.print_rooms()
+
+for r in room_grid:
+    n = r["n"] if "n" in r else -1
+    s = r["s"] if "s" in r else -1
+    e = r["e"] if "e" in r else -1
+    w = r["w"] if "w" in r else -1
+    if "x" in r: x = r["x"]
+    if "y" in r: y = r["y"]
+    make_r = Room(id=r["id"], title=r["title"], description=r["description"], x=x, y=y, n=n, s=s, e=e, w=w,
+                  items="".join(r["items"]))
+    make_r.save()
+
+players=Player.objects.all()
+for p in players:
+  p.currentRoom=room.id
+  p.save()
 
 
 print(f"\n\nWorld\n  height: {height}\n  width: {width},\n  num_rooms: {num_rooms}\n")
